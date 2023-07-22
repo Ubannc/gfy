@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>حمار يضحك</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button id="showLaughingDonkey">انقر لمشاهدة المفاجأة!</button>
+        <div id="laughingDonkey" class="hidden">
+            <img src="https://media.tenor.com/1TOcjjsjz7sAAAAM/donkey-laugh.gif" alt="حمار يضحك">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("showLaughingDonkey").addEventListener("click", function() {
+            const laughingDonkeyDiv = document.getElementById("laughingDonkey");
+            const button = document.getElementById("showLaughingDonkey");
+
+            if (laughingDonkeyDiv.classList.contains("hidden")) {
+                laughingDonkeyDiv.classList.remove("hidden");
+                button.innerText = "إخفاء المفاجأة";
+            } else {
+                laughingDonkeyDiv.classList.add("hidden");
+                button.innerText = "انقر لمشاهدة المفاجأة!";
+            }
+        });
+    </script>
+</body>
+</html>
